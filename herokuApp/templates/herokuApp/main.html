@@ -1,0 +1,9 @@
+<p>HOME</p>
+<br>
+<a href="{% url 'create' %}">글쓰기</a>
+
+{% for posts in posts.all %}
+<hr>
+<p>제목 :<a href="{% url 'detail' posts.id %}">{{ posts.title }}</a></p>
+<p>작성 일지 및 시간 : {{ posts.pub_date }}</p>
+{% endfor %}
